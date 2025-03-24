@@ -32,14 +32,6 @@ O padrão Observer estabelece uma relação um-para-muitos entre objetos, de mod
 4. **ConcreteObserver**: Implementação do Observer que mantém uma referência ao ConcreteSubject e implementa a interface de atualização.
    - Implementado em: `Cliente.java` - Observa produtos e recebe notificações quando entram em estoque
 
-### Diagrama de Classes
-
-```
-Subject (Interface) <|-- Produto
-Observer (Interface) <|-- Cliente
-Produto o-- Observer
-```
-
 ## Aplicação no Contexto de Marketplace
 
 No contexto deste projeto, o padrão Observer é utilizado para:
