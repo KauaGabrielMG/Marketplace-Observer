@@ -36,8 +36,4 @@ O padrão Observer estabelece uma relação um-para-muitos entre objetos, de mod
 
 No contexto deste projeto, o padrão Observer é utilizado para:
 
-- Notificar compradores sobre mudanças de preços em produtos
-- Alertar vendedores sobre novas vendas ou estoque baixo
-- Informar administradores sobre atividades suspeitas ou problemas no sistema
-- Atualizar dashboards de análise em tempo real
-
+- Notificar clientes sobre a chegada de um produto
