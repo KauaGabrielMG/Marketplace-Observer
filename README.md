@@ -2,6 +2,8 @@
 
 Projeto desenvolvido para a matéria de 2903 - PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO
 
+Alunos: Kauã Gabriel, Pedro Paulo, Victor Tavares e Johnatas Alencar
+
 ## Descrição do Projeto
 
 Este projeto implementa um sistema de Marketplace utilizando o padrão de projeto Observer. O objetivo é criar uma aplicação que demonstre a utilização deste padrão em um contexto de comércio eletrônico, onde diferentes entidades (como compradores, vendedores, ou sistemas de análise) podem observar e reagir a eventos do marketplace.
