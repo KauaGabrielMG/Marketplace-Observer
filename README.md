@@ -1,17 +1,49 @@
 # Marketplace-Observer
+
 Projeto desenvolvido para a matéria de 2903 - PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO
 
-## Como Executar
-1. Acesse o site [OnlineGDB](https://www.onlinegdb.com/online_java_compiler).
-2. Copie e cole o código dos arquivos `.java` no editor.
-3. Clique no botão "Run" para compilar e executar o projeto.
+## Descrição do Projeto
 
-## Estrutura do Projeto
-- `Cliente.java`: Implementa a interface `Observer` e representa um cliente que é notificado quando um produto está em estoque.
-- `Main.java`: Contém o método principal para executar a aplicação.
-- `Observer.java`: Interface que define o método `atualizar` para os observadores.
-- `Produto.java`: Implementa a interface `Subject` e representa um produto que pode ser observado.
-- `Subject.java`: Interface que define métodos para adicionar, remover e notificar observadores.
+Este projeto implementa um sistema de Marketplace utilizando o padrão de projeto Observer. O objetivo é criar uma aplicação que demonstre a utilização deste padrão em um contexto de comércio eletrônico, onde diferentes entidades (como compradores, vendedores, ou sistemas de análise) podem observar e reagir a eventos do marketplace.
 
-## Padrão Observer
-O padrão observer é utilizado neste projeto para notificar os clientes quando um produto está em estoque. A classe `Produto` (sujeito) mantém uma lista de objetos `Observer` (clientes) e os notifica quando o status de estoque do produto muda. A interface `Observer` define o método `atualizar`, que é implementado pela classe `Cliente` para receber notificações.
+## Detalhes de Implementação
+
+- **Linguagem**: Java
+- **Paradigma**: Programação Orientada a Objetos (POO)
+- **Padrão de Projeto**: Observer
+
+## Estrutura do Padrão Observer
+
+O padrão Observer estabelece uma relação um-para-muitos entre objetos, de modo que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
+
+### Componentes principais:
+
+1. **Subject (Observable)**: Interface ou classe abstrata que define operações para gerenciar observadores.
+   - Implementado em: `Subject.java`
+
+2. **Observer**: Interface que define o método de atualização a ser chamado quando o estado do Subject muda.
+   - Implementado em: `Observer.java`
+
+3. **ConcreteSubject**: Implementação do Subject que mantém o estado e notifica os observadores quando há mudanças.
+   - Implementado em: `Produto.java` - Gerencia o estado de disponibilidade dos produtos e notifica observadores quando produtos entram em estoque
+
+4. **ConcreteObserver**: Implementação do Observer que mantém uma referência ao ConcreteSubject e implementa a interface de atualização.
+   - Implementado em: `Cliente.java` - Observa produtos e recebe notificações quando entram em estoque
+
+### Diagrama de Classes
+
+```
+Subject (Interface) <|-- Produto
+Observer (Interface) <|-- Cliente
+Produto o-- Observer
+```
+
+## Aplicação no Contexto de Marketplace
+
+No contexto deste projeto, o padrão Observer é utilizado para:
+
+- Notificar compradores sobre mudanças de preços em produtos
+- Alertar vendedores sobre novas vendas ou estoque baixo
+- Informar administradores sobre atividades suspeitas ou problemas no sistema
+- Atualizar dashboards de análise em tempo real
+
